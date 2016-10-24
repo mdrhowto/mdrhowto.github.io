@@ -35,3 +35,7 @@ timezone: America/Los_Angeles
 future: false
 
 
+
+sass:
+  sass_dir: css
+  style:    expanded
