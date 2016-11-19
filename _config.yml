@@ -1,41 +1,129 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing these this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# Jekyll!
+# Documentation: https://jekyllrb.com/docs/configuration/
+# Quick Overview: http://news.humancoders.com/t/developpement/items/11149-jekyll-cheat-sheet
+# Jekyll serve commands:
+#   Local:   bundle exec jekyll serve --trace --config _config.yml,_config_local.yml
+#   Cloud9:  bundle exec jekyll serve --trace --config _config.yml,_config_c9.yml
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@domain.com
+
+title: Media Done Right
+email: hi@MediaDoneRight.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "/www" # the subpath of your site, e.g. /blog
-url: "https://mdrhowto.github.io" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "//mdrhowto.github.io" # the base hostname & protocol for your site
+
+# Third party tokens and accounts                                               # MDR: Third party
+google-site-verification: z08mpbqfq2cp4mfuxeOzinIJcSAqhM7lU0z2YMz72U0
+google-analytics:
+twitter:  MediaDoneRight
+github:   MediaDoneRight
+facebook: MediaDoneRight
+
+
+# Customize menu names & links for the site
+navigation:                                                                     # MDR: Site Navigation Menu elements: names and links
+  brand:                                                                        # MDR: Brand menu
+    text: #"<span class='light'>Media Done Right</span>"
+    link: "#"
+    logo: "/style/images/theme/logo.png"                                              # if empty, defaults to an arrow icon using font-awesome
+  main:                                                                         # MDR: Main Menu  ( "LABEL": "URL" )
+    "Hire Us": "/contact/"
+    "Our Work": "/content/portfolio/"
+    "What We Do": "/web-development/"
+    "Who We Are": "/team/"
+    "Blog": "/blog/"
+  foot:                                                                         # MDR: Footer Menu
+    "Copyright &copy; 2016 Uncoded.org":
+
+
+collections:
+  portfolio:
+    output: true
+    permalink: /content/portfolio/:title/
+  pages:
+    output: true
+    permalink: /:title/
+
+
+defaults:
+  -
+    scope:
+      type: "pages" # pages was previously `page` in Jekyll 2.2.
+      path: ""
+      output: true
+#      permalink: /yo/:title/
+    values:
+      layout: "page" # overrides previous default layout
+      author: "Mike Stewart"
+  -
+    scope:
+      type: "posts" # posts was previously `post` in Jekyll 2.2.
+      path: "" # an empty string here means all files in the project
+      output: true
+    values:
+      layout: "page"
+      #date:   2016-10-24 17:15:39 +0700
+      permalink: /blog/:year/:month/:day/:title/
+      paginate_path: "/blog/page:num/"
 
 # Build settings
 markdown: kramdown
 theme: minima
-
-# Timezone per https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone: America/Los_Angeles 
-
-# Publish posts or collection documents with a future date.
-future: false
-
-
+timezone: America/Los_Angeles                                                   # MDR: (Jekyll built-in. Just not set by default) Values from: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+future: false                                                                   # MDR: Publish posts or collection documents with a future date.
+environment: production                                                         # MDR: Verbose debugging.  Value of 'debug' creates various extra output
 
 sass:
-  sass_dir: css
+  sass_dir: style/css
   style:    expanded
+
+stylesheets:                                                                    # MDR: Added to automate loading of css + js
+  - name: JQuery mobile css
+    source: //ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css
+    local:
+  - name: JQuery slick css
+    source: //cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css
+    local:
+  - name: Font Awesome 4.7
+    source: /style/fonts/font-awesome-4.7.0/css/font-awesome.min.css
+    local: true
+  - name: local css
+    source: /style/css/style.css
+    local: true
+
+javascript:
+  - name: JQuery
+    source: //ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
+    local:
+  # - name: JQuery Mobile
+  #   source: //ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js
+  #   local:
+  # - name: jQuery Slick Slideshow Plugin
+  #   source: //cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js
+  #   local:
+  # - name: local site
+  #   source: /style/js/bootstrap.js
+  #   local: true
+  - name: local site
+    source: /style/js/bootstrap.min.js
+    local: true
+  # - name: local site
+  #   source: /style/js/foo.js
+  #   local: true
+
+#paginate: 2
+#
+# gems:
+#   - jekyll-pagination
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - .gitignore
+  - .git
+  - .c9
+  - foo
