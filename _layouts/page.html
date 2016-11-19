@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+{% include tpl_layout_top.html %}
+<body class="{% if page.url == '/' %}front{% endif %}" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+{% include tpl_layout_navigation.html %}
+    <div class="container-fluid">
+      <div class="content">
+        {{ content }}
+      </div>
+    </div><!-- /.container -->
+</body>
+</html>

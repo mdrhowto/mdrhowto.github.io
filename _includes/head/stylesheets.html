@@ -1,0 +1,12 @@
+{% if site.environment == "debug" %}
+  <!-- tpl_head_css.html -->
+{% endif %}
+
+{% for link in site.stylesheets %}
+{% include utilities/url.html %}
+<link rel="stylesheet" href="{{ simpleurl }}{{ link.source }}"> 
+{% endfor %}
+
+{% if site.environment == "debug" %}
+  <!--// tpl_head_css.html -->
+{% endif %}

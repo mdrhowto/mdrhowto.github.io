@@ -1,0 +1,25 @@
+{% comment %}
+
+Input: 				link.local 
+							see _includes/head/*.html 
+							and collections: site.javascript, site.stylesheet in _config.yml)
+
+Output: 			simpleurl
+
+Problem: 			Github projects require a baseurl.  local development does not. 
+							linking to local and CDN based css+js files is complex. This makes
+							it simple.
+
+Description:  Used to create a base URL to link css+js files both local and CDN
+							resources from _config.yml
+
+{% endcomment %}
+{% assign simpleurl = "" %}
+{% assign foo = "" %}
+{% if link.local %}
+		{% capture foo %}
+			{% if site.url %}{{ site.url }}{% endif %}
+			{% if site.baseurl %}{{ site.baseurl }}{% endif %}
+		{% endcapture %}
+		{% assign simpleurl = foo | lstrip | rstrip | strip_newlines %}
+{% endif %}

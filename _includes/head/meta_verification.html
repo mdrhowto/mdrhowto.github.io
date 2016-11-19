@@ -1,0 +1,11 @@
+{% if site.environment == "debug" %}
+<!-- tpl_head_meta_verification.html -->
+{% endif %}
+{% if site.environment == "production" %}
+  {% if site.google-site-verification %}
+      <meta name="google-site-verification" content="{{ site.google-site-verification }}">
+  {% endif %}
+{% endif %}
+{% if site.environment == "debug" %}
+  <!--// tpl_head_meta_verification.html -->
+{% endif %}
