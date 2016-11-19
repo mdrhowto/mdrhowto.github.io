@@ -1,0 +1,26 @@
+---
+title: what we do
+permalink: /team/
+---
+
+## Media Done Right Team
+
+_Media Done Right_ is a boutique web shop created by _Long Beach_ resident, Mike Stewart in 2005\. The company is built from a love of internet technologies. The projects _Media Done Right_ has engaged in allow our team to work on high quality projects to stay on the cutting-edge of technology and best practices in web development. In addition, _Media Done Right_ has also allowed our team members to maintain non-traditional work schedules. We typically work on projects without tight time constraints or larger budgets. Currently Media Done Right is a solo operation which utilizes high-quality sub-contractors known through previous projects, networking, and community events. This allows _Media Done Right_ to bring on additional capacity and/or expertise for fun & challenging projects.
+
+Besides client projects, _Media Done Right_ is passionate about open source and community -- a lifeline of support when using cutting edge technologies. In that spirit, Mike Stewart helped organize & grow the [LA Drupal](https://groups.drupal.org/la) community (from 2008-2012). In late 2014 I began planning the Long Beach based [WAPRO Meetup](http://www.waprolb.org), which held its first meeting in Jan 2015\. In mid 2015 I was a founding member of [Uncoded](http://uncoded.org), which is an organization focused on connecting and building the tech community in Long Beach.
+
+
+![]({{ site.baseurl }}/style/images/IMG_20140806_115249.jpg)
+
+### Mike Stewart
+
+__architect. themer. site builder. devops. project manager.__
+
+_HTML, SASS, JS, PHP, Drupal, Apache, NginX, Linux._
+
+
+With over 15 years of tech experience built on top of a Bachelor's in Information Technology, Stewart brings an experienced and pragmatic approach to projects. He has been involved with many types of projects for clients both large and small in a variety of industries. The larger projects he's been involved with include systems with thousands of users across multiple sites for companies such as Lockheed Martin, ITT Industries, Visteon, and Delphi or local clients as small as _Red Door Living_. In his career Stewart has worked on a variety of enterprise systems, including ERP (Baan, SAP), Warehouse Management, Manufacturing Execution, CRM, Document Management, workflow, and his favorite: Websites and web based applications.
+
+Following his passion, in 2005 he started working with Drupal exclusively after examining existing Open Source content management solutions and identified Drupal. He soon became hooked on the principles of open source and the benefits it brings to the enterprise of not being locked to a particular vendor, proprietary standard or protocol. In the spirit of openness he became active in the Drupal community as a contributor, frequent speaker, and local community organizer. Stewart has been involved with the LA Drupal community since 2007 and has co-organized ongoing monthly meetups since January 2008, and [www.DrupalCampLA.com](http://www.DrupalCampLA.com "www.DrupalCampLA.com") 2009-2012.
+
+He has a passion for UX on the front-end and flexibility and security on the back-end. Due to this, he is equally torn between the beauty of handcrafted CSS or cleaver bash scripts on a server such as Debian, Ubuntu, or FreeBSD.
