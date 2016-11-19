@@ -1,0 +1,128 @@
+---
+---
+
+// add bootstrap variable settings here
+
+@import 'bootstrap';
+
+$color1: #555;
+$color2: #dddddd;
+.footoo {
+//  position: relative;
+}
+
+.fourohfour {
+  background:none;
+}
+
+@keyframes eye {
+  0% {box-shadow:  3em -9em $color1;}
+  5% {box-shadow: 0 0 0 0 $color1;}
+  50% {box-shadow:  0em 0em $color1;}
+}
+
+@keyframes mouth {
+  0% {
+    box-shadow:  6em -4em $color1, 7em -4em $color1, 8em -4em $color1;
+  }
+  50% {
+    box-shadow:  5em -3em $color1, 6em -3em $color1, 7em -3em $color1, 8em -3em $color1;
+  }
+}
+@keyframes comets {
+  0% {
+    box-shadow:  -23em -23em $color1,  -20em -20em $color1,  -18em -18em $color1,  -17em -17em $color1,  -16em -16em $color1,  -15em -15em $color1,  -13em -14em $color1, -12em -14em $color1, -11em -14em $color1,  -14em -13em $color1, -13em -13em $color1, -12em -13em $color1, -11em -13em $color1, -10em -13em $color1,  -14em -12em $color1, -13em -12em $color1, -11em -12em $color1, -10em -12em $color1,  -14em -11em $color1, -13em -11em $color1, -12em -11em $color1, -11em -11em $color1, -10em -11em $color1,  -13em -10em $color1, -12em -10em $color1, -11em -10em $color1,  -9em -19em $color1,  -8em -18em $color1,  -7em -17em $color1,  -6em -16em $color1, -5em -16em $color1,  -6em -15em $color1, -5em -15em $color1;
+  }
+  33% {
+    box-shadow:  -24em -24em $color1,  -21em -21em $color1,  -18em -18em $color1,  -17em -17em $color1,  -16em -16em $color1,  -15em -15em $color1,  -13em -14em $color1, -12em -14em $color1, -11em -14em $color1,  -14em -13em $color1, -13em -13em $color1, -12em -13em $color1, -11em -13em $color1, -10em -13em $color1,  -14em -12em $color1, -13em -12em $color1, -11em -12em $color1, -10em -12em $color1,  -14em -11em $color1, -13em -11em $color1, -12em -11em $color1, -11em -11em $color1, -10em -11em $color1,  -13em -10em $color1, -12em -10em $color1, -11em -10em $color1,  -10em -20em $color1,  -9em -19em $color1,  -8em -18em $color1,  -7em -17em $color1,  -6em -16em $color1, -5em -16em $color1,  -6em -15em $color1, -5em -15em $color1;
+  }
+  66% {
+    box-shadow:  -26em -26em $color1,  -22em -22em $color1,  -18em -18em $color1,  -17em -17em $color1,  -16em -16em $color1,  -15em -15em $color1,  -13em -14em $color1, -12em -14em $color1, -11em -14em $color1,  -14em -13em $color1, -13em -13em $color1, -12em -13em $color1, -11em -13em $color1, -10em -13em $color1,  -14em -12em $color1, -13em -12em $color1, -11em -12em $color1, -10em -12em $color1,  -14em -11em $color1, -13em -11em $color1, -12em -11em $color1, -11em -11em $color1, -10em -11em $color1,  -13em -10em $color1, -12em -10em $color1, -11em -10em $color1,  -11em -21em $color1,  -9em -19em $color1,  -8em -18em $color1,  -7em -17em $color1,  -6em -16em $color1, -5em -16em $color1,  -6em -15em $color1, -5em -15em $color1;
+  }
+}
+@keyframes ground {
+  0% {
+    box-shadow:  -12em 6em $color1, -11em 6em $color1, -10em 6em $color1, -9em 6em $color1, -8em 6em $color1, -7em 6em $color1, -6em 6em $color1, 4em 6em $color1, 5em 6em $color1, 6em 6em $color1, 7em 6em $color1, 8em 6em $color1, 9em 6em $color1, 10em 6em $color1, 11em 6em $color1, 12em 6em $color1,  8em 8em $color1, 9em 8em $color1, 10em 8em $color1,  -7em 9em $color1, -6em 9em $color1,  6em 10em $color1, 7em 10em $color1,  -10em 11em $color1, -9em 11em $color1;
+  }
+  15% {
+    box-shadow:  -12em 6em $color1, -11em 6em $color1, -10em 6em $color1, -9em 6em $color1, -8em 6em $color1, -7em 6em $color1, -6em 6em $color1, 4em 6em $color1, 5em 6em $color1, 6em 6em $color1, 7em 6em $color1, 8em 6em $color1, 9em 6em $color1, 10em 6em $color1, 11em 6em $color1, 12em 6em $color1,  4em 8em $color1, 5em 8em $color1, 6em 8em $color1,  -12em 9em $color1, -11em 9em $color1,  2em 10em $color1, 3em 10em $color1,  10em 11em $color1, 11em 11em $color1;
+  }
+  30% {
+    box-shadow:  -12em 6em $color1, -11em 6em $color1, -10em 6em $color1, -9em 6em $color1, -8em 6em $color1, -7em 6em $color1, -6em 6em $color1, 4em 6em $color1, 5em 6em $color1, 6em 6em $color1, 7em 6em $color1, 8em 6em $color1, 9em 6em $color1, 10em 6em $color1, 11em 6em $color1, 12em 6em $color1,  0em 8em $color1, 1em 8em $color1, 2em 8em $color1,  8em 9em $color1, 9em 9em $color1,  -2em 10em $color1, -1em 10em $color1,  6em 11em $color1, 7em 11em $color1;
+  }
+  45% {
+    box-shadow:  -12em 6em $color1, -11em 6em $color1, -10em 6em $color1, -9em 6em $color1, -8em 6em $color1, -7em 6em $color1, -6em 6em $color1, 4em 6em $color1, 5em 6em $color1, 6em 6em $color1, 7em 6em $color1, 8em 6em $color1, 9em 6em $color1, 10em 6em $color1, 11em 6em $color1, 12em 6em $color1,  -4em 8em $color1, -3em 8em $color1, -2em 8em $color1,  4em 9em $color1, 5em 9em $color1,  -6em 10em $color1, -5em 10em $color1,  2em 11em $color1, 3em 11em $color1;
+  }
+  60% {
+    box-shadow:  -12em 6em $color1, -11em 6em $color1, -10em 6em $color1, -9em 6em $color1, -8em 6em $color1, -7em 6em $color1, -6em 6em $color1, 4em 6em $color1, 5em 6em $color1, 6em 6em $color1, 7em 6em $color1, 8em 6em $color1, 9em 6em $color1, 10em 6em $color1, 11em 6em $color1, 12em 6em $color1,  -8em 8em $color1, -7em 8em $color1, -6em 8em $color1,  0em 9em $color1, 1em 9em $color1,  -10em 10em $color1, -9em 10em $color1,  -2em 11em $color1, -1em 11em $color1;
+  }
+  75% {
+    box-shadow:  -12em 6em $color1, -11em 6em $color1, -10em 6em $color1, -9em 6em $color1, -8em 6em $color1, -7em 6em $color1, -6em 6em $color1, 4em 6em $color1, 5em 6em $color1, 6em 6em $color1, 7em 6em $color1, 8em 6em $color1, 9em 6em $color1, 10em 6em $color1, 11em 6em $color1, 12em 6em $color1,  -12em 8em $color1, -11em 8em $color1, -10em 8em $color1,  -4em 9em $color1, -3em 9em $color1,  10em 10em $color1, 11em 10em $color1,  -6em 11em $color1, -5em 11em $color1;
+  }
+}
+@keyframes dino {
+  0% {
+    box-shadow:  2em -10em $color1, 3em -10em $color1, 4em -10em $color1, 5em -10em $color1, 6em -10em $color1, 7em -10em $color1, 8em -10em $color1, 9em -10em $color1,  1em -9em $color1, 2em -9em $color1, 4em -9em $color1, 5em -9em $color1, 6em -9em $color1, 7em -9em $color1, 8em -9em $color1, 9em -9em $color1, 10em -9em $color1,  1em -8em $color1, 2em -8em $color1, 3em -8em $color1, 4em -8em $color1, 5em -8em $color1, 6em -8em $color1, 7em -8em $color1, 8em -8em $color1, 9em -8em $color1, 10em -8em $color1,  1em -7em $color1, 2em -7em $color1, 3em -7em $color1, 4em -7em $color1, 5em -7em $color1, 6em -7em $color1, 7em -7em $color1, 8em -7em $color1, 9em -7em $color1, 10em -7em $color1,  1em -6em $color1, 2em -6em $color1, 3em -6em $color1, 4em -6em $color1, 5em -6em $color1, 6em -6em $color1, 7em -6em $color1, 8em -6em $color1, 9em -6em $color1, 10em -6em $color1,  1em -5em $color1, 2em -5em $color1, 3em -5em $color1, 4em -5em $color1, 5em -5em $color1,  0em -4em $color1, 1em -4em $color1, 2em -4em $color1, 3em -4em $color1, 4em -4em $color1, 5em -4em $color1,  -9em -3em $color1, -3em -3em $color1, -2em -3em $color1, -1em -3em $color1, 0em -3em $color1, 1em -3em $color1, 2em -3em $color1, 3em -3em $color1, 4em -3em $color1,  -9em -2em $color1, -2em -2em $color1, -1em -2em $color1, 0em -2em $color1, 1em -2em $color1, 2em -2em $color1, 3em -2em $color1, 4em -2em $color1,  -9em -1em $color1, -8em -1em $color1, -3em -1em $color1, -2em -1em $color1, -1em -1em $color1, 0em -1em $color1, 1em -1em $color1, 2em -1em $color1, 3em -1em $color1, 4em -1em $color1, 5em -1em $color1, 6em -1em $color1,  -9em 0em $color1, -8em 0em $color1, -7em 0em $color1, -4em 0em $color1, -3em 0em $color1, -2em 0em $color1, -1em 0em $color1, 0em 0em $color1, 1em 0em $color1, 2em 0em $color1, 3em 0em $color1, 4em 0em $color1, 6em 0em $color1,  -9em 1em $color1, -8em 1em $color1, -7em 1em $color1, -6em 1em $color1, -5em 1em $color1, -4em 1em $color1, -3em 1em $color1, -2em 1em $color1, -1em 1em $color1, 0em 1em $color1, 1em 1em $color1, 2em 1em $color1, 3em 1em $color1, 4em 1em $color1,  -8em 2em $color1, -7em 2em $color1, -6em 2em $color1, -5em 2em $color1, -4em 2em $color1, -3em 2em $color1, -2em 2em $color1, -1em 2em $color1, 0em 2em $color1, 1em 2em $color1, 2em 2em $color1, 3em 2em $color1, 4em 2em $color1,  -7em 3em $color1, -6em 3em $color1, -5em 3em $color1, -4em 3em $color1, -3em 3em $color1, -2em 3em $color1, -1em 3em $color1, 0em 3em $color1, 1em 3em $color1, 2em 3em $color1, 3em 3em $color1,  -6em 4em $color1, -5em 4em $color1, -4em 4em $color1, -3em 4em $color1, -2em 4em $color1, -1em 4em $color1, 0em 4em $color1, 1em 4em $color1, 2em 4em $color1,  -5em 5em $color1, -4em 5em $color1, -3em 5em $color1, -2em 5em $color1, -1em 5em $color1, 0em 5em $color1, 1em 5em $color1,  -4em 6em $color1, -3em 6em $color1, 0em 6em $color1, 1em 6em $color1,  -3em 7em $color1, -2em 7em $color1, 1em 7em $color1,  1em 8em $color1,  1em 9em $color1, 2em 9em $color1;
+  }
+  50% {
+    box-shadow:  2em -10em $color1, 3em -10em $color1, 4em -10em $color1, 5em -10em $color1, 6em -10em $color1, 7em -10em $color1, 8em -10em $color1, 9em -10em $color1,  1em -9em $color1, 2em -9em $color1, 4em -9em $color1, 5em -9em $color1, 6em -9em $color1, 7em -9em $color1, 8em -9em $color1, 9em -9em $color1, 10em -9em $color1,  1em -8em $color1, 2em -8em $color1, 3em -8em $color1, 4em -8em $color1, 5em -8em $color1, 6em -8em $color1, 7em -8em $color1, 8em -8em $color1, 9em -8em $color1, 10em -8em $color1,  1em -7em $color1, 2em -7em $color1, 3em -7em $color1, 4em -7em $color1, 5em -7em $color1, 6em -7em $color1, 7em -7em $color1, 8em -7em $color1, 9em -7em $color1, 10em -7em $color1,  1em -6em $color1, 2em -6em $color1, 3em -6em $color1, 4em -6em $color1, 5em -6em $color1, 6em -6em $color1, 7em -6em $color1, 8em -6em $color1, 9em -6em $color1, 10em -6em $color1,  1em -5em $color1, 2em -5em $color1, 3em -5em $color1, 4em -5em $color1, 5em -5em $color1,  -3em -4em $color1, -2em -4em $color1, 0em -4em $color1, 1em -4em $color1, 2em -4em $color1, 3em -4em $color1, 4em -4em $color1, 5em -4em $color1,  -9em -3em $color1, -2em -3em $color1, -1em -3em $color1, 0em -3em $color1, 1em -3em $color1, 2em -3em $color1, 3em -3em $color1, 4em -3em $color1,  -9em -2em $color1, -2em -2em $color1, -1em -2em $color1, 0em -2em $color1, 1em -2em $color1, 2em -2em $color1, 3em -2em $color1, 4em -2em $color1,  -9em -1em $color1, -8em -1em $color1, -3em -1em $color1, -2em -1em $color1, -1em -1em $color1, 0em -1em $color1, 1em -1em $color1, 2em -1em $color1, 3em -1em $color1, 4em -1em $color1,  -9em 0em $color1, -8em 0em $color1, -7em 0em $color1, -4em 0em $color1, -3em 0em $color1, -2em 0em $color1, -1em 0em $color1, 0em 0em $color1, 1em 0em $color1, 2em 0em $color1, 3em 0em $color1, 4em 0em $color1, 5em 0em $color1, 6em 0em $color1,  -9em 1em $color1, -8em 1em $color1, -7em 1em $color1, -6em 1em $color1, -5em 1em $color1, -4em 1em $color1, -3em 1em $color1, -2em 1em $color1, -1em 1em $color1, 0em 1em $color1, 1em 1em $color1, 2em 1em $color1, 3em 1em $color1, 4em 1em $color1, 6em 1em $color1,  -8em 2em $color1, -7em 2em $color1, -6em 2em $color1, -5em 2em $color1, -4em 2em $color1, -3em 2em $color1, -2em 2em $color1, -1em 2em $color1, 0em 2em $color1, 1em 2em $color1, 2em 2em $color1, 3em 2em $color1, 4em 2em $color1,  -7em 3em $color1, -6em 3em $color1, -5em 3em $color1, -4em 3em $color1, -3em 3em $color1, -2em 3em $color1, -1em 3em $color1, 0em 3em $color1, 1em 3em $color1, 2em 3em $color1, 3em 3em $color1,  -6em 4em $color1, -5em 4em $color1, -4em 4em $color1, -3em 4em $color1, -2em 4em $color1, -1em 4em $color1, 0em 4em $color1, 1em 4em $color1, 2em 4em $color1,  -5em 5em $color1, -4em 5em $color1, -3em 5em $color1, -2em 5em $color1, -1em 5em $color1, 0em 5em $color1, 1em 5em $color1,  -4em 6em $color1, -3em 6em $color1, -2em 6em $color1, 1em 6em $color1, 2em 6em $color1,  -4em 7em $color1, -3em 7em $color1,  -4em 8em $color1,  -4em 9em $color1, -3em 9em $color1;
+  }
+}
+
+$color2: red;
+@keyframes four0four {
+  0% {
+    box-shadow:  2em -10em $color2, 3em -10em $color2, 4em -10em $color2, 5em -10em $color2, 6em -10em $color2;
+                 
+  }
+  50% {
+    box-shadow:  2em -10em $color2, 3em -10em $color2, 4em -10em $color2, 5em -10em $color2, 6em -10em $color2;
+  }
+}
+
+body {
+  font-size: 7px;
+  background-color: $color2;
+}
+.foobox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  * {
+  background: $color1;
+  height: 0.5em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0.5em;
+  }
+}
+
+.dino, .eye, .mouth {
+  width: 1em;
+  height: 1em;
+}
+
+.dino {
+  animation: dino 0.25s both steps(1) infinite;
+}
+
+.eye {
+  animation: eye 4s both steps(1) infinite;
+}
+
+.mouth {
+  animation: mouth 4s both steps(1) infinite;
+}
+
+.ground {
+  animation: ground 0.5s both steps(1) infinite;
+}
+
+.comets {
+  animation: comets 0.5s both steps(1) infinite;
+}
+
+.four0four {
+  animation: four0four 4s both steps(1) infinite;
+}
