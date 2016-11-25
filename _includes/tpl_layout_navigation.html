@@ -19,10 +19,11 @@
 								 {{ site.navigation.brand.text }}
 			</a>
     </div>
-    
+
     <div id="navbar" class="collapse navbar-collapse navbar-right navbar-main-collapse">
       <ul class="nav navbar-nav">
         {% for item in site.navigation.main %}
+          {% assign active = "" %}
           {% if item[1] == page.url %}{% assign active = "active" %}{% endif %}
           <li class="{{ active }}"><a class="page-scroll"  href="{{ site.url }}{{ site.baseurl }}{{ item[1] }}">{{ item[0] }}</a></li>
         {% endfor %}
