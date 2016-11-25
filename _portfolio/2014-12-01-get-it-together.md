@@ -1,9 +1,9 @@
 ---
 title:  "Get It Together"
 tags: Jekyll
-sticky: false
-promoted: true
-weight: 0
+promoted: true                                                                  # carousel: true = promoted to image carousel
+sticky: false                                                                   # carousel: true = first slide (css: active)
+weight: 10                                                                      # carousel: sort order (reversed from high to low)
 website_url: http://www.getittogether.us
 images:
     - title: Get It Together website homepage

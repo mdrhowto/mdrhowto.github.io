@@ -1,33 +1,39 @@
-{% assign promoted_projects = (site.portfolio | sort: 'title') %}
+{% assign promoted_projects = site.portfolio | sort: 'weight' %}
 
 <div id="carousel-example-generic" class="carousel slide" style="background-color:black;" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    {% for project in site.portfolio reversed %}
+    {% for project in promoted_projects reversed %}
       {% assign toslide = forloop.index0 %}
-    {% for img in project.images %}
+      {% comment %}
+
+      Assign slide number for use by bootstrap carousel navigtion
+      {% endcomment %}
+
+      {% for img in project.images %}
+      {% if project.promoted %}
     <li data-target="#carousel-example-generic" data-slide-to="{{ toslide }}" class="{% if project.sticky %}active{% endif %}"></li>
-    {% endfor %}
+      {% endif %}
+      {% endfor %}
     {% endfor %}
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-  {% for project in promoted_projects %}
+  {% for project in promoted_projects reversed %}
+    {% if project.promoted %}
     {% for img in project.images %}
     <div class="item{% if project.sticky %} active{% endif %}">
       <a href="{% if site.url %}{{ site.url }}{% endif %}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ project.url }}">
         <img src="{% if site.url %}{{ site.url }}{% endif %}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ img.path }}{{ img.file }}" alt="{{ img.title }}" />
       </a>
       <div class="carousel-caption">
-        <a href="{% if site.url %}{{ site.url }}{% endif %}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ project.url }}"></a>h2>{{ project.title }}</h2></a>
+        <a href="{% if site.url %}{{ site.url }}{% endif %}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ project.url }}"></a><h2>{{ project.title }}</h2></a>
         <!--p>{{ project.content }}</p -->
       </div>
     </div>
     {% endfor %}
-      {% if site.environment == "debug" %}
-        {{ project.title | inspect }}
-      {% endif %}
+    {% endif %}
   {% endfor %}
   </div>
 
@@ -41,3 +47,21 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
+{% if site.environment == "debug" %}
+<h2>Debug Info</h2>
+  <section class="jumbotron" style="color:blue;">
+    <div>
+      <h2>site.portfolio</h2>
+      {{ site.portfolio | inspect | jsonify }}
+    </div>
+  </section>
+{% endif %}
+{% if site.environment == "debug" %}
+  <section class="jumbotron" style="color:black;">
+    <div>
+      <h2>promoted_projects</h2>
+     {{ promoted_projects | inspect }}
+    </div>
+  </section>
+{% endif %}

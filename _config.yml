@@ -28,7 +28,7 @@ navigation:                                                                     
   brand:                                                                        # MDR: Brand menu
     text: #"<span class='light'>Media Done Right</span>"
     link: "#"
-    logo: "/style/images/theme/logo.png"                                              # if empty, defaults to an arrow icon using font-awesome
+    logo: "/style/images/theme/logo.svg"                                              # if empty, defaults to an arrow icon using font-awesome
   main:                                                                         # MDR: Main Menu  ( "LABEL": "URL" )
     "Hire Us": "/contact/"
     "Our Work": "/content/portfolio/"
@@ -110,9 +110,9 @@ javascript:
   - name: local site
     source: /style/js/bootstrap.min.js
     local: true
-  # - name: local site
-  #   source: /style/js/foo.js
-  #   local: true
+  - name: local site
+    source: /style/js/rockon.js
+    local: true
 
 #paginate: 2
 #

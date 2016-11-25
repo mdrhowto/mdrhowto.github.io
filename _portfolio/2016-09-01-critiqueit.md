@@ -1,9 +1,9 @@
 ---
 title:  "Website: CritiqueIT.com"
 tags: Wordpress
-sticky: false
-promoted: true
-weight: 0
+promoted: true                                                                  # carousel: true = promoted to image carousel
+sticky: false                                                                   # carousel: true = first slide (css: active)
+weight: 10                                                                      # carousel: sort order (reversed from high to low)
 website_url: http://www.uncoded.org
 images:
     - title: CritiqueIT website homepage
