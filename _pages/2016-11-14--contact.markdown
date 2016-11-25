@@ -1,6 +1,6 @@
 ---
 title: Contact
-description:  foo bar baz
+description:  Media Done Right can be hired to develop a website for your company or project
 ---
 
 Well Hello! This is actually our favorite page on our website. Our chance to build a new relationship and hopefully an opportunity do what we love: Drupal websites! For cool people! Yes, Media Done Right can be hired to design or develop a great website for you or your company. Heck, we even do SEO consulting and can offer general help with your existing website. But our expertise is Drupal; Drupal optimized, Drupal configured, and Drupal customized specifically to your website needs.

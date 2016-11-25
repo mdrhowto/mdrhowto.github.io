@@ -13,4 +13,4 @@ images:
       caption:
 ---
 
-From inception to launch, the website took less than a week! The initial idea that quickly transformed into Uncoded was the brainchild of Mike Stewart, owner of Media Done Right and long-time community organizer. With the help of other founding members, especially Aaron Pedersen of DevelopmentArc, the website was quickly built based upon the Open Source Jekyll Theme, also built by Media Done Right. It is currently hosted on Uncoded's GitHub account which allows for greater community participation.
+CritiqueIT is a Long Beach based startup providing a cloud based solution for multi-modal—text, audio, video—annotation on docs, images, audio and video files.  CritiqueIT contracted Media Done Right to re-build their existing website using Wordpress to provide new responsive capabilities and an updated look.  They chose Wordpress in order to more easily build their product demo directly into the website, integration is  available as a wordpress plug-in.   
