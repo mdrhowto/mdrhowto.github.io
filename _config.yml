@@ -51,15 +51,6 @@ collections:
 defaults:
   -
     scope:
-      type: "pages" # pages was previously `page` in Jekyll 2.2.
-      path: ""
-      output: true
-#      permalink: /yo/:title/
-    values:
-      layout: "page" # overrides previous default layout
-      author: "Mike Stewart"
-  -
-    scope:
       type: "posts" # posts was previously `post` in Jekyll 2.2.
       path: "" # an empty string here means all files in the project
       output: true
@@ -68,6 +59,21 @@ defaults:
       #date:   2016-10-24 17:15:39 +0700
       permalink: /blog/:year/:month/:day/:title/
       paginate_path: "/blog/page:num/"
+  -                                                                             # Collections
+    scope:
+      type: "pages" # pages was previously `page` in Jekyll 2.2.
+      path: ""
+    values:
+      layout: "page" # overrides previous default layout
+      author: "Mike Stewart"
+  -
+    scope:
+      type: "portfolio" # pages was previously `page` in Jekyll 2.2.
+      path: ""
+    values:
+      layout: "page" # overrides previous default layout
+      author: "Mike Stewart"
+
 
 # Build settings
 markdown: kramdown
