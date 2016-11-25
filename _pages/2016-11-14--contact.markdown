@@ -8,9 +8,4 @@ Well Hello! This is actually our favorite page on our website. Our chance to bui
 Media Done Right is based in the Los Angeles metro area, Long Beach to be exact. Call us to chat on the phone or we can setup an appointment to meet.
 
 
-## Meet Us
-Office: 562-999-2724
-
-
-## Email Us
-Email typically works best for us. You can leave us a message using the contact form below. We'll get back to you quickly... usually within an hour or so.
+{% include contact.html %}

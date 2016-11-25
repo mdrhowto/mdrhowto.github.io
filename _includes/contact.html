@@ -1,0 +1,29 @@
+<div id="postscript-top" class="postscript-top row nested ">
+<div id="postscript-top-inner" class="postscript-top-inner inner clearfix">
+
+<div id="block-block-2" class="block block-block odd first last mdr-blk-gradient grid16-16">
+  <div class="inner clearfix">
+    <div class="content clearfix">
+  <h2>Contact Us</h2>
+<div class="vcard">
+<div class="adr"><div class="fn org">
+  {% for contact in site.data.contact %}
+  {% if contact.name %}<div class="organization-name">{{ contact.name }}</div>{% endif %}
+  {% if contact.name %}<div style="display:none;" class="fn nickname">{{ contact.name }}</div></div>{% endif %}
+  {% if contact.street %}<div style="display:none;" class="street-address">{{ contact.street }}</div>{% endif %}
+  {% if contact.city %}<div><span class="locality">{{ contact.city }}</span>{% if contact.state-abr %}, {% endif %}{% endif %}{% if contact.state-abr %}<abbr class="region" title="{{ contact.state-full }}">{{ contct.state-abr }}</abbr>{% endif%}{% if contact.zipcode %} <span class="postal-code">{{ contact.zipcode }}</span></div>{% endif %}
+
+  <h3>Meet Us</h3>
+  <div class="tel">Office: <a href="tel:+1{{ contact.phone | remove: '-' | remove: '.' | remove: ' ' }}">{{ contact.phone }}</a></div>
+</div></div>
+
+  <h3>Email Us</h3>
+  Email typically works best for us.  <a href="mailto:{{ contact.email }}?subject=Website%20Inquiry&body=Please%20contact%20me%2E%0A%0DPhone%3A%20%0A%0DMessage%3A%20%0A%0D" role="button" class="btn btn-default"> {{ contact.email }}</a>. 
+
+  {% endfor %}
+<br>
+<a href="contact">hire us</a>    </div>
+  </div><!-- /block-inner -->
+</div><!-- /block -->
+</div><!-- /postscript-top-inner -->
+</div>

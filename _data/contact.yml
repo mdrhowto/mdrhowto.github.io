@@ -1,0 +1,9 @@
+- name: Media Done Right
+  url: www.MediaDoneRight.com
+  street:
+  city: Long Beach
+  state-full: California
+  state-abr: CA
+  zipcode: 90814
+  phone: 562-999-2724
+  email: hi@MediaDoneRight.com
