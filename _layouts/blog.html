@@ -6,23 +6,6 @@ layout: default
 <body class="{% if page.url == '/' %}front{% endif %}" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
   <div class="container-fluid content">
     {% include tpl_layout_navigation.html %}
-    <div class="row full-height">
-      <div class="col-sm-12">
-        {% include tpl_carousel_portfolio.html %}
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-      {% comment %}
-        {% for category in page.categories %}
-          {% for post in site.categories[category] %}
-            post: {{ category | inspect }}
-            site.categories.[category]: {{ site.categories[category] | inspect }}
-          {% endfor %}
-        {% endfor %}
-      {% endcomment %}
-      </div>
-    </div>
     <aside>
       <div class="row full-height">
           <h2 class="page-heading">Blog</h2>
@@ -39,11 +22,6 @@ layout: default
           </ul>
       </div>
     </aside>
-    <div class="row">
-      <div class="col-sm-12">
-      {{ content }}
-      </div>
-    </div>
     <button class="rss-subscribe btn">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></button>
   </div><!-- /.container -->
 </body>

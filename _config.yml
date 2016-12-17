@@ -54,7 +54,8 @@ defaults:
       path: "" # an empty string here means all files in the project
       output: true
     values:
-      layout: "page"
+      layout: "post"
+      excerpt_separator: <!--break-->
       #date:   2016-10-24 17:15:39 +0700
       permalink: /blog/:year/:month/:day/:title/
       paginate_path: "/blog/page:num/"
@@ -64,6 +65,7 @@ defaults:
       path: ""
     values:
       layout: "page" # overrides previous default layout
+      excerpt_separator: <!--break-->
       author: "Mike Stewart"
   -
     scope:
@@ -71,6 +73,7 @@ defaults:
       path: ""
     values:
       layout: "page" # overrides previous default layout
+      excerpt_separator: <!--break-->
       author: "Mike Stewart"
 
 
@@ -121,7 +124,8 @@ javascript:
 
 #paginate: 2
 #
-# gems:
+gems:
+  - jemoji
 #   - jekyll-pagination
 
 exclude:

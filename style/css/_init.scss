@@ -1,0 +1,165 @@
+/*
+    ██  ██     ██    ██  █████  ██████  ██  █████  ██████  ██      ███████ ███████
+   ██  ██      ██    ██ ██   ██ ██   ██ ██ ██   ██ ██   ██ ██      ██      ██
+  ██  ██       ██    ██ ███████ ██████  ██ ███████ ██████  ██      █████   ███████
+ ██  ██         ██  ██  ██   ██ ██   ██ ██ ██   ██ ██   ██ ██      ██           ██
+██  ██           ████   ██   ██ ██   ██ ██ ██   ██ ██████  ███████ ███████ ███████
+*/
+
+#####  Palette URL: http://colorschemedesigner.com/#3K31Es6Jew0w0
+
+/* Branding
+*/
+
+// *** Primary Color:
+$color-brand-primary: #2C60D0;
+$color-brand-primary-dark: #405D9C;
+$color-brand-primary-darkest: #0E3587;
+$color-brand-primary-light: #5F8AE8;
+$color-brand-primary-lightest: #83A3E8;
+$color-brand-body-text: #ffe984;
+
+// *** Secondary Color
+$color-brand-secondary: #FFC61F;
+$color-brand-secondary-dark: #BF9F41;
+$color-brand-secondary-darkest: #A67E0A;
+$color-brand-secondary-light: #FFD457;
+$color-brand-secondary-lightest #FFE084;
+
+// *** Secondary Color B:
+$color-brand-tertiary: #FF9E1F;
+$color-brand-tertiary-dark: #BF8841;
+$color-brand-tertiary-darkest: #A6620A;
+$color-brand-tertiary-light: #FFB657;
+$color-brand-tertiary-lightest: #FFC984;
+
+// Design Neutrals
+$color-light: #f9f9f9;
+$color-lightest: #fff;
+$color-dark: #000;
+$color-dark-dark: #455A64;
+$color-grey-light: #e1e1e1;
+$color-grey-dark: #727272;
+
+// =Brand Palette
+$color-brand-primary: rgb(44, 96, 208); // Headings
+$color-brand-secondary: #212121; // Text
+$color-brand-tertiary: $color-white; // Background
+$color-brand-quaternary: #607d8b; // Accent
+$color-brand-quinary: #bbdefb; // Accent
+
+$color-brand-primary-complimentary: #455a64;
+$color-brand-secondary-complimentary: #2bb3dd;
+$color-brand-tertiary-complimentary: #00bdbd;
+$color-brand-quaternary-complimentary: #b3e5fc;
+$color-brand-quinary-complimentary: green;
+
+// =Background
+$site-bg: $color-bright;
+$site-bg-start: $color-bright;
+$site-bg-end: $color-bright;
+$site-background-attachment: null; // 'fixed, local, inherit, or null'
+
+// =Default Text Colors
+$base-font-color: $color-brand-secondary;
+$base-accent-color: $color-brand-tertiary;
+// $heading-color: $color-brand-primary;
+// $heading-color-alt: $color-brand-secondary;
+
+// =Supplementary Colors
+$alert-bg: mix($color-primary-red, white, 40%);
+$alert-color: $color-primary-red;
+$success-bg: mix($color-primary-green, white, 40%);
+$success-color: $color-primary-green;
+$info-bg: mix($color-primary-blue, white, 40%);
+$info-color: $color-primary-blue;
+
+
+
+//----------------------------------------------------------
+
+
+
+
+
+// COLORS
+
+$color1: #FFF;
+$color2: #000;
+$color3: rgba(#B0C6EF,.7);
+
+
+// Theme Elements
+$navbar-bg: transparent;
+$navbar-link: black;
+$navbar-link-hover: rgba(255,250,255,.9);
+$navbar-link-bg: transparent;
+$navbar-link-bg-focus: rgba(00,100,255,.8);
+$navbar-link-bg-active: rgba(#B0C6EF,.7);
+$navbar-link-bg-hover: transparent;
+
+$navbar-bg-collapse: transparent;
+$navbar-link-collapse: white;
+$navbar-link-collapse-hover: rgba(75,75,75,.9);
+$navbar-link-collapse-bg: transparent;
+$navbar-link-collapse-bg-focus: rgba(00,100,255,.8);
+$navbar-link-collapse-bg-active: yellow;
+$navbar-link-collapse-bg-hover: transparent;
+
+//not used
+$navbar-collapse: transparent;
+$navbar-collapse-link: transparent;
+$navbar-collapse-link-hover-color: transparent;
+$navbar-collapse-bg: transparent;
+$navbar-collapse-link-bg-hover: transparent;
+$navbar-collapse-border: transparent;
+$navbar-collapse-border-thickness: 0px;
+$navbar-collapse-border-type: none;
+
+$navbar-font: "Montserrat","Helvetica Neue","Helvetica","Arial","sans-serif";
+$navbar-border: transparent;
+$navbar-border-thickness: 0px;
+$navbar-border-type: none;
+
+
+// MEDIA QUERIES BASED ON  - https://davidwalsh.name/write-media-queries-sass#mixins-to-the-rescue
+// SIZES SET FOR BOOTSTRAP - https://getbootstrap.com/css/#grid-media-queries
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is 'mobile first' */
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+@mixin screen-small {
+  @media (min-width: #{$screen-sm-min}) and (max-width: #{$screen-md-min - 1px}) {
+    @content;
+    // EXAMPLE
+    // @include screen-small {
+    //     font-size: 18px;
+    //   }
+  }
+}
+
+@mixin screen-medium {
+  @media (min-width: #{$screen-md-min}) and (max-width: #{$screen-lg-min - 1px}) {
+    @content;
+    // EXAMPLE
+    // @include screen-medium {
+    //     font-size: 18px;
+    //   }
+  }
+}
+
+@mixin screen-large {
+  @media (min-width: #{$screen-lg}) {
+    @content;
+    // EXAMPLE
+    // @include screen-large {
+    //     font-size: 18px;
+    //   }
+  }
+}

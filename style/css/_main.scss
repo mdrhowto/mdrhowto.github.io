@@ -1,0 +1,174 @@
+/*
+  Example: Build jekyll site with sass sourcmaps, and run server:
+
+  bundle exec jekyll build --config _config.yml,_config_local.yml && \
+  sass --sourcemap=auto --scss --compass --update --force style/css/_mdr.scss:_site/style/css/style.css && \
+  bundle exec jekyll serve --skip-initial-build --no-watch --trace --config _config.yml,_config_local.yml
+*/
+// // add bootstrap variable settings here
+@import 'bootstrap';
+@import 'init';
+
+/*
+    ██  ██     ██████   █████  ███████ ███████
+   ██  ██      ██   ██ ██   ██ ██      ██
+  ██  ██       ██████  ███████ ███████ █████
+ ██  ██        ██   ██ ██   ██      ██ ██
+██  ██         ██████  ██   ██ ███████ ███████
+*/
+
+html, body {height: 100%;
+}
+
+body {
+  padding-top: 0;
+  //background:url("{{ site.baseurl }}/style/images/theme/bg_header.png") repeat-x center top;
+  background:url("/style/images/theme/bg_header.png") repeat-x center top;
+  background-color: #2C60D0;
+  color: #ffe984;
+}
+
+.full-height {
+  padding-top: 50px;
+  @include screen-small {
+    //height: 100%;
+    padding-top: 90px;
+  }
+  @include screen-medium {
+    height: 1vh;
+    //padding-top: 90px;
+  }
+  @include screen-large {
+    height: 1vh;
+    padding-top: 90px;
+  }
+}
+
+
+/*
+    ██  ██     ███    ██  █████  ██    ██ ██  ██████   █████  ████████ ██  ██████  ███    ██
+   ██  ██      ████   ██ ██   ██ ██    ██ ██ ██       ██   ██    ██    ██ ██    ██ ████   ██
+  ██  ██       ██ ██  ██ ███████ ██    ██ ██ ██   ███ ███████    ██    ██ ██    ██ ██ ██  ██
+ ██  ██        ██  ██ ██ ██   ██  ██  ██  ██ ██    ██ ██   ██    ██    ██ ██    ██ ██  ██ ██
+██  ██         ██   ████ ██   ██   ████   ██  ██████  ██   ██    ██    ██  ██████  ██   ████
+*/
+
+.navbar-brand {
+   a {
+   }
+  img {
+  // display:block;
+  // text-indent:-9999em;
+  // width:265px;
+  margin-top: -10px;
+  height:40px;
+  //background:url("{{ site.baseurl }}/style/images/theme/logo.png") no-repeat center top;
+  }
+}
+
+.navbar-toggle .icon-bar {
+  background-color: $color1;
+}
+
+.navbar-custom {
+  margin-bottom: 0;
+  border-bottom: $navbar-border-thickness $navbar-border-type $navbar-border;
+  text-transform: uppercase;
+  font-family: $navbar-font;
+  background-color: $navbar-bg;
+  -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+  -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+  transition: background .5s ease-in-out,padding .5s ease-in-out;
+
+
+  & + p {
+    margin: 0; // fix jekyll rendering of empty p tags @TODO: Test. not sure needed anymore.
+  }
+
+ .nav a {
+   color: $navbar-link;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+  }
+
+ .nav a:hover {
+    outline: 0;
+    color: $navbar-link-hover;
+    background-color: $navbar-bg;
+  }
+
+ .nav a:focus,
+ .nav a:active {
+    outline: 0;
+    background-color: $navbar-link-bg-focus;
+  }
+
+  .nav li.active {
+    outline: 0;
+  }
+
+  .nav li.active a {
+    background-color: $navbar-link-bg-active;
+  }
+
+ .nav li.active a:hover {
+    color: #fff;
+  }
+
+  @include screen-small {
+          padding: 30px 0;
+          border-bottom: 0;
+          letter-spacing: 1px;
+          background: 0 0;
+          -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+          -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+          transition: background .5s ease-in-out,padding .5s ease-in-out;
+
+      &.top-nav-collapse {
+          padding: 0;
+          border-bottom: 1px solid rgba(255,255,255,.3);
+          background: #000;
+      }
+  }
+
+  @include screen-medium {
+        padding: 60px 0;
+        border-bottom: 0;
+        letter-spacing: 1px;
+        background: transparent;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+
+      &.top-nav-collapse {
+          padding: 0;
+          border-bottom: 5px solid rgba(255,255,255,.3);
+          background: #000;
+      }
+  }
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: 700;
+}
+
+.navbar-custom .navbar-brand:focus {
+    outline: 0;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle {
+    padding: 4px 6px;
+    font-size: 16px;
+    color: $navbar-link;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle:focus,
+.navbar-custom .navbar-brand .navbar-toggle:active {
+    outline: 0;
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}

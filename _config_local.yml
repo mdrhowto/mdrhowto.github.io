@@ -1,3 +1,6 @@
 baseurl: ""
 url: ""
-environment: debug
+environment: #debug
+keep_files:
+  - style/css/style.css.map
+  - style/css/style.css
