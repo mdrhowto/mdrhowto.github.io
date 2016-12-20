@@ -4,7 +4,9 @@
 # Jekyll serve commands:
 #   Local:   bundle exec jekyll serve --trace --config _config.yml,_config_local.yml
 #   Cloud9:  bundle exec jekyll serve --trace --config _config.yml,_config_c9.yml
-
+#   Local dev w/SASS: bundle exec jekyll serve --detach --config _config.yml,_config_local.yml
+#                     sass --sourcemap=auto --update --force --watch style/css/_main.scss:_site/style/css/style.css
+#                     sass --sourcemap=auto --watch style/css/_main.scss:_site/style/css/style.css
 
 title: Media Done Right
 description: > # this means to ignore newlines until "baseurl:"
