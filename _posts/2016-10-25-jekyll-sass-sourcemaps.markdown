@@ -103,18 +103,10 @@ Run sass with these commandline options:
 
 Assuming you're running from a shell (or a GUI that can run custom commands), create your sourcemap and run the Jekyll webserver with the following shell commands.
 
-```sh
-# bundle exec jekyll build --detach --no-watch --config _config.yml,_config_local.yml
-# sass --sourcemap=auto --update --force style/css/_main.scss:_site/style/css/style.css
-# bundle exec jekyll serve --skip-initial-build --no-watch --config _config.yml,_config_local.yml
-```
-
-The first builds the current Jekyll website.  The next compiles CSS and any sourcemaps.  Finally, the last starts the Jekyll server but doesn't rebuild or watch for changes.  You could also run the last command with the `--detach` option, which allows the server to run in the background.
-
-
-
 ```
 bundle exec jekyll serve --detach --config _config.yml,_config_local.yml
 sass --sourcemap=auto --update --force --watch style/css/_main.scss:_site/style/css/style.css
 sass --sourcemap=auto --watch style/css/_main.scss:_site/style/css/style.css
 ```
+
+The first command starts the Jekyll webserver and runs it in the background.  Note: to stop it you'll need to run the command `pkill -f jekyll`.  The next command forces sass to compile CSS and sourcemaps.  This is needed due to a limitation of the sass server, which doesn't allow you to force the compilation when you start the server.  Finally, start the sass server and watch for scss changes to comile into css and sourcemaps.
