@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+{% include tpl_layout_top.html %}
+<body class="{% if page.url == '/' %}front{% endif %}" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <div class="container-fixed content">
+    {% include tpl_layout_navigation.html %}
+
+    <aside>
+      <div class="row full-height">
+      </div>
+    </aside>
+    <div class="row">
+      <div class="col-sm-12">
+      {{ content }}
+
+
+      {% assign promoted_projects = site.portfolio | sort: 'promoted' | sort: 'weight' %}
+      <div class="" role="">
+
+      {% for project in promoted_projects reversed %}
+
+        ## foo:  {{ project.title }}
+
+        {% if project.promoted %}
+        {% for img in project.images %}
+
+        <h2> foo: {{ img.title }}</h2>
+
+        <div class="item{% if project.sticky %} active{% endif %}">
+          <!-- a href="{% if site.url %}{{ site.url }}{% endif %}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ project.url }}">
+            <img src="{% if site.url %}{{ site.url }}{% endif %}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ img.path }}{{ img.file }}" alt="{{ img.title }}" />
+          </a -->
+        </div>
+        {% endfor %}
+        {% endif %}
+      {% endfor %}
+      </div>
+
+
+
+      </div>
+    </div>
+    <button class="rss-subscribe btn">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></button>
+  </div><!-- /.container -->
+</body>
+</html>

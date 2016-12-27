@@ -32,7 +32,7 @@ navigation:                                                                     
     logo: "/style/images/theme/logo.svg"                                              # if empty, defaults to an arrow icon using font-awesome
   main:                                                                         # MDR: Main Menu  ( "LABEL": "URL" )
     "Hire Us": "/contact/"
-    "Our Work": "/content/portfolio/"
+    "Our Work": "/portfolio/"
     "What We Do": "/web-development/"
     "Who We Are": "/team/"
     "Blog": "/blog/"
