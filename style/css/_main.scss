@@ -21,25 +21,25 @@ html, body {height: 100%;
 }
 
 body {
-  padding-top: 0;
+  //padding-top: 0;
   //background:url("{{ site.baseurl }}/style/images/theme/bg_header.png") repeat-x center top;
   background:url("/style/images/theme/bg_header.png") repeat-x center top;
-  background-color: #2C60D0;
-  color: #ffe984;
+  background-color: $color-brand-primary;
+  color: $color-brand-body-text;
 }
 
 .full-height {
-  padding-top: 50px;
+  //padding-top: 50px;
   @include screen-small {
     //height: 100%;
     padding-top: 90px;
   }
   @include screen-medium {
-    height: 1vh;
+    //height: 1vh;
     //padding-top: 90px;
   }
   @include screen-large {
-    height: 1vh;
+    //height: 1vh;
     padding-top: 90px;
   }
 }
@@ -60,14 +60,14 @@ body {
   // display:block;
   // text-indent:-9999em;
   // width:265px;
-  margin-top: -10px;
-  height:40px;
+  margin-top: -10px;// @TODO
+  height: 40px;// @TODO
   //background:url("{{ site.baseurl }}/style/images/theme/logo.png") no-repeat center top;
   }
 }
 
 .navbar-toggle .icon-bar {
-  background-color: $color1;
+  background-color: $color-light;
 }
 
 .navbar-custom {
@@ -76,36 +76,32 @@ body {
   text-transform: uppercase;
   font-family: $navbar-font;
   background-color: $navbar-bg;
-  -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-  -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-  transition: background .5s ease-in-out,padding .5s ease-in-out;
-
+  @include transition-property(background,padding);
+  @include transition-duration(.5s);
+  @include transition-timing-function(ease-in-out);
 
   & + p {
-    margin: 0; // fix jekyll rendering of empty p tags @TODO: Test. not sure needed anymore.
+    //margin: 0; // fix jekyll rendering of empty p tags @TODO: Test. not sure needed anymore.
   }
 
  .nav a {
-   color: $navbar-link;
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
+   color: $color-dark;// @TODO
+    @include transition-property(color,background);
+    @include transition-duration(.7s);
+    @include transition-timing-function(ease-out);
   }
 
  .nav a:hover {
-    outline: 0;
-    color: $navbar-link-hover;
-    background-color: $navbar-bg;
+    //color: $navbar-link-hover;// @TODO
+    background-color: $navbar-default-bg;// @TODO
   }
 
  .nav a:focus,
  .nav a:active {
-    outline: 0;
-    background-color: $navbar-link-bg-focus;
+    background-color: $navbar-link-bg-focus;// @TODO
   }
 
   .nav li.active {
-    outline: 0;
   }
 
   .nav li.active a {
@@ -113,17 +109,17 @@ body {
   }
 
  .nav li.active a:hover {
-    color: #fff;
+    color: $color-light;
   }
 
   @include screen-small {
           padding: 30px 0;
           border-bottom: 0;
           letter-spacing: 1px;
-          background: 0 0;
-          -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-          -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-          transition: background .5s ease-in-out,padding .5s ease-in-out;
+          //background: 0 0;
+          @include transition-property(background,padding);
+          @include transition-duration(.5s);
+          @include transition-timing-function(ease-in-out);
 
       &.top-nav-collapse {
           padding: 0;
@@ -136,10 +132,9 @@ body {
         padding: 60px 0;
         border-bottom: 0;
         letter-spacing: 1px;
-        background: transparent;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
+        @include transition-property(background,padding);
+        @include transition-duration(.5s);
+        @include transition-timing-function(ease-in-out);
 
       &.top-nav-collapse {
           padding: 0;
@@ -154,7 +149,7 @@ body {
 }
 
 .navbar-custom .navbar-brand:focus {
-    outline: 0;
+    //outline: 0;// @TODO
 }
 
 .navbar-custom .navbar-brand .navbar-toggle {
