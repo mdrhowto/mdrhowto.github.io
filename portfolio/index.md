@@ -1,6 +1,7 @@
 ---
 layout: portfolio
 ---
-### something foo
 
-foo
+### some content
+
+foobar content!!!

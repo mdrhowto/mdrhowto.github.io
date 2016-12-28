@@ -16,26 +16,27 @@ layout: default
       {{ content }}
 
 
-      {% assign promoted_projects = site.portfolio | sort: 'promoted' | sort: 'weight' %}
+      {% assign promoted_projects = site.portfolio | sort: 'date' | sort: 'weight' %}
       <div class="" role="">
 
-      {% for project in promoted_projects reversed %}
+      {% for project in promoted_projects %}
 
-        ## foo:  {{ project.title }}
 
-        {% if project.promoted %}
+<h3>{{ project.title }}</h3>
+<p>{{ project.content }}</p>
+<ul>
+<li>weight: {{ project.weight }}</li>
+<li>promoted: {{ project.promoted }}</li>
+<li>tags: {{ project.tags }}</li>
+<li>sticky: {{ project.sticky }}</li>
+<li>website_url: {{ project.website_url }}</li>
+    <ul>
         {% for img in project.images %}
-
-        <h2> foo: {{ img.title }}</h2>
-
-        <div class="item{% if project.sticky %} active{% endif %}">
-          <!-- a href="{% if site.url %}{{ site.url }}{% endif %}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ project.url }}">
-            <img src="{% if site.url %}{{ site.url }}{% endif %}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ img.path }}{{ img.file }}" alt="{{ img.title }}" />
-          </a -->
-        </div>
+        <li> image: {{ img.title }}</li>
         {% endfor %}
-        {% endif %}
-      {% endfor %}
+    </ul>
+</ul>
+{% endfor %}
       </div>
 
 
