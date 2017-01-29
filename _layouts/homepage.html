@@ -4,47 +4,8 @@ layout: default
 
 {% include tpl_layout_top.html %}
 <body class="{% if page.url == '/' %}front{% endif %}" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-  <div class="container-fixed content">
-    {% include tpl_layout_navigation.html %}
-    <div class="row full-height">
-      <div class="col-sm-12">
+        {% include tpl_layout_navigation.html %}
         {% include tpl_carousel_portfolio.html %}
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-      {% comment %}
-        {% for category in page.categories %}
-          {% for post in site.categories[category] %}
-            post: {{ category | inspect }}
-            site.categories.[category]: {{ site.categories[category] | inspect }}
-          {% endfor %}
-        {% endfor %}
-      {% endcomment %}
-      </div>
-    </div>
-    <aside>
-      <div class="row full-height">
-          <h2 class="page-heading">Blog</h2>
-          <ul class="post-list">
-            {% for post in site.posts %}
-              <li class="col-md-4">
-                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-                &nbsp;
-                <h2>
-                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-                </h2>
-              </li>
-            {% endfor %}
-          </ul>
-      </div>
-    </aside>
-    <div class="row">
-      <div class="col-sm-12">
-      {{ content }}
-      </div>
-    </div>
-    <button class="rss-subscribe btn">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></button>
-  </div><!-- /.container -->
+        {% include tpl_block_blogs_recent.html %}
 </body>
 </html>

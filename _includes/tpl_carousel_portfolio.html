@@ -1,68 +1,76 @@
 {% assign promoted_projects = site.portfolio | sort: 'weight' %}
+{% assign slide-index = 0 %}
+{% comment %}
 
-<aside>
-<div id="carousel-example-generic" class="carousel slide" style="background-color:black;" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    {% for project in promoted_projects reversed %}
-      {% assign toslide = forloop.index0 %}
-      {% comment %}
+Assign a sequential 'slide-index' number for use by bootstrap carousel indicator navigation dots
+  This doesn't work --> {% assign slide-index = forloop.index0 %}
+  because it provides index of all slides, promoted or not.
+{% endcomment %}
 
-      Assign slide number for use by bootstrap carousel navigtion
-      {% endcomment %}
+<div class="full-height">
+    <aside>
+    <div id="carousel-portfolio" class="carousel slide portfolio-carousel" style="background-color:black;" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators hidden-xs">
+        {% for project in promoted_projects reversed %}
+          {% for img in project.images %}
+          {% if project.promoted %}
+        <li data-target="#carousel-portfolio" data-slide-to="{{ slide-index }}" class="{% if project.sticky %}active{% endif %}"></li>
+          {% assign slide-index = slide-index | plus: 1 %}
+          {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ol>
 
-      {% for img in project.images %}
-      {% if project.promoted %}
-    <li data-target="#carousel-example-generic" data-slide-to="{{ toslide }}" class="{% if project.sticky %}active{% endif %}"></li>
-      {% endif %}
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+      {% for project in promoted_projects reversed %}
+        {% if project.promoted %}
+        {% for img in project.images %}
+        <div class="item{% if project.sticky %} active{% endif %}">
+          <a href="{% if site.url %}{{ site.url }}{% endif %}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ project.url }}">
+            <img class="portfolio-image" src="{% if site.url %}{{ site.url }}{% endif %}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ img.path }}{{ img.file }}" alt="{{ img.title }}" />
+          </a>
+          <div class="carousel-caption hidden-xs hidden-sm">
+            <a href="#ShowDesc" class="btn btn-link" data-toggle="collapse"><h2>{{ project.title }}</h2></a>
+            <div id="ShowDesc" class="collapse well">
+              <p class="show-on-hover hidden-print">{{ project.content }}</p>
+              <!--a class="" href="{% if site.url %}{{ site.url }}{% endif %}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ project.url }}"><h3>Read More ...</h3></a-->
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        {% endif %}
       {% endfor %}
-    {% endfor %}
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-  {% for project in promoted_projects reversed %}
-    {% if project.promoted %}
-    {% for img in project.images %}
-    <div class="item{% if project.sticky %} active{% endif %}">
-      <a href="{% if site.url %}{{ site.url }}{% endif %}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ project.url }}">
-        <img src="{% if site.url %}{{ site.url }}{% endif %}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ img.path }}{{ img.file }}" alt="{{ img.title }}" />
-      </a>
-      <div class="carousel-caption">
-        <a href="{% if site.url %}{{ site.url }}{% endif %}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ project.url }}"></a><h2>{{ project.title }}</h2></a>
-        <!--p>{{ project.content }}</p -->
       </div>
-    </div>
-    {% endfor %}
-    {% endif %}
-  {% endfor %}
-  </div>
 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-portfolio" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-portfolio" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    {% if jekyll.environment == "debug" %}
+    <h2>Debug Info</h2>
+      <div class="jumbotron" style="color:blue;">
+        <div>
+          <h2>site.portfolio</h2>
+          {{ site.portfolio | inspect | jsonify }}
+        </div>
+      </div>
+    {% endif %}
+    {% if jekyll.environment == "debug" %}
+      <div class="jumbotron" style="color:black;">
+        <div>
+          <h2>promoted_projects</h2>
+         {{ promoted_projects | inspect }}
+        </div>
+      </div>
+    {% endif %}
+    </aside>
+
 </div>
-{% if site.environment == "debug" %}
-<h2>Debug Info</h2>
-  <div class="jumbotron" style="color:blue;">
-    <div>
-      <h2>site.portfolio</h2>
-      {{ site.portfolio | inspect | jsonify }}
-    </div>
-  </div>
-{% endif %}
-{% if site.environment == "debug" %}
-  <div class="jumbotron" style="color:black;">
-    <div>
-      <h2>promoted_projects</h2>
-     {{ promoted_projects | inspect }}
-    </div>
-  </div>
-{% endif %}
-</aside>
