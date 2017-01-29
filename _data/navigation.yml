@@ -1,0 +1,16 @@
+main:                                                                         # Main Menu  ( "LABEL": "URL" )
+  "Hire Us": "/contact/"
+  "Our Work": "/portfolio/"
+  "What We Do": "/web-development/"
+  "Who We Are": "/team/"
+  "Blog": "/blog/"
+
+brand:                                                                        # Brand menu (logo)
+  text: #"<span class='light'>Media Done Right</span>"
+  link: "#"
+  logo: "/style/images/theme/logo.svg"                                        # if empty, uses fa-character (below)
+  css-glyph: "fa fa-spinner fa-spin fa-3x" #example: "glyphicon glyphicon-picture fa fa-2x"
+              #http://fontawesome.io/cheatsheet/ http://glyphicons.com/
+
+footer:                                                                         # Footer Menu
+  "Copyright &copy; 2016 Uncoded.org":

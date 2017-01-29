@@ -10,16 +10,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{% if page.url != '/' %}/{% endif %}{{ site.navigation.brand.link }}">
-								{% if site.navigation.brand.logo %}<img class="" src="{{ site.navigation.brand.logo }}" alt="Brand">
-								 {% else %}<i class="fa fa-compass"></i>  {% endif %}
-								 {{ site.navigation.brand.text }}
+      <a class="navbar-brand" href="{% if page.url != '/' %}/{% endif %}{{ site.data.navigation.brand.link }}">
+								{% if site.data.navigation.brand.logo %}<img class="" src="{{ site.data.navigation.brand.logo }}" alt="Brand">
+								 {% else %}<i class="{{ site.data.navigation.brand.css-glyph }}"></i>  {% endif %}
+								 {{ site.data.navigation.brand.text }}
 			</a>
     </div>
 
     <div id="navbar" class="collapse navbar-collapse navbar-right navbar-main-collapse">
       <ul class="nav navbar-nav">
-        {% for item in site.navigation.main %}
+        {% for item in site.data.navigation.main %}
           {% assign active = "" %}
           {% if item[1] == page.url %}{% assign active = "active" %}{% endif %}
           <li class="{{ active }}"><a class="page-scroll"  href="{{ site.url }}{{ site.baseurl }}{{ item[1] }}">{{ item[0] }}</a></li>

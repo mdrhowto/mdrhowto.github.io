@@ -73,20 +73,6 @@ defaults:
 # ██      ██    ██      ██    ██    ██    ██ ██  ██  ██     ██    ██ ██      ██    ██ ██   ██ ██   ██ ██
 #  ██████  ██████  ███████    ██     ██████  ██      ██      ██████  ███████  ██████  ██████  ██   ██ ███████
 
-# Menu names & links for the site
-navigation:                                                                     # MDR: Site Navigation Menu elements: names and links
-  brand:                                                                        # MDR: Brand menu
-    text: #"<span class='light'>Media Done Right</span>"
-    link: "#"
-    logo: "/style/images/theme/logo.svg"                                        # if empty, defaults to an arrow icon using font-awesome
-  main:                                                                         # MDR: Main Menu  ( "LABEL": "URL" )
-    "Hire Us": "/contact/"
-    "Our Work": "/portfolio/"
-    "What We Do": "/web-development/"
-    "Who We Are": "/team/"
-    "Blog": "/blog/"
-  foot:                                                                         # MDR: Footer Menu
-    "Copyright &copy; 2016 Uncoded.org":
 
 # Plugin config: jekyll-seo-tag
 # SEO & Social
