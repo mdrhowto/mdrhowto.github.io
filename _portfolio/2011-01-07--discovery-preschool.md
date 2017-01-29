@@ -5,11 +5,11 @@ promoted: false                                                                 
 sticky: false                                                                   # carousel: true = first slide (css: active)
 weight: 10                                                                      # carousel: sort order (reversed from high to low)
 website_url: http://discoverylaucc.com
-permalink: /content/discovery-preschool
+permalink:
 images:
     - title:
-      file:
-      path: /style/images/portfolio/1920x1080/
+      file: website-portfolio--screenshot--discovery-preschool-www.discoverylaucc.com.png
+      path: /style/images/portfolio/orig/
       link:
       caption:
 ---

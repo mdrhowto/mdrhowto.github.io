@@ -5,11 +5,11 @@ promoted: false                                                                 
 sticky: false                                                                   # carousel: true = first slide (css: active)
 weight: 00                                                                      # carousel: sort order (reversed from high to low)
 website_url: http://www.iBenefitConsult.com
-permalink: /content/integrated-benefit-consulting-inc
+permalink:
 images:
     - title:
-      file:
-      path: /style/images/portfolio/1920x1080/
+      file: website-portfolio--screenshot--www.ibenefitconsult.com.png
+      path: /style/images/portfolio/orig/
       link:
       caption:
 ---
