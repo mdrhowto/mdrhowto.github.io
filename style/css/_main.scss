@@ -17,29 +17,36 @@
 ██  ██         ██████  ██   ██ ███████ ███████
 */
 
-html, body {height: 100%;
+html, body {
 }
+
+html {
+  @include gradient-vertical($color-primary-0, $color-primary-3, 40vh, 80vh);
+}
+
 
 body {
   //padding-top: 0;
   //background:url("{{ site.baseurl }}/style/images/theme/bg_header.png") repeat-x center top;
   background:url("/style/images/theme/bg_header.png") repeat-x center top;
-  background-color: $color-brand-primary;
+  //background-color: $color-brand-primary;
   color: $color-brand-body-text;
 }
 
 .full-height {
   //padding-top: 50px;
   @include screen-small {
-    //height: 100%;
+    height: 100vh;
     padding-top: 90px;
   }
   @include screen-medium {
-    //height: 1vh;
-    //padding-top: 90px;
+    //display: block;
+    height: 100vh;
+    padding-top: 90px;
   }
   @include screen-large {
-    //height: 1vh;
+    //display: block;
+    height: 100vh;
     padding-top: 90px;
   }
 }
@@ -166,4 +173,47 @@ body {
 .container-fluid {
   padding-left: 0;
   padding-right: 0;
+}
+
+
+/*
+ ██████  █████  ██████   ██████  ██    ██ ███████ ███████ ██
+██      ██   ██ ██   ██ ██    ██ ██    ██ ██      ██      ██
+██      ███████ ██████  ██    ██ ██    ██ ███████ █████   ██
+██      ██   ██ ██   ██ ██    ██ ██    ██      ██ ██      ██
+ ██████ ██   ██ ██   ██  ██████   ██████  ███████ ███████ ███████
+*/
+
+.portfolio-carousel {
+  width: $portfolio-image-carousel-width
+}
+.portfolio-image {
+  width: $portfolio-image-full-width !important;
+}
+
+.portfolio-thumb {
+  border: 5px red dash;
+  max-width: $portfolio-image-thumb-width;
+}
+
+
+// Carousel Image Effects
+#carousel-portfolio {
+  .portfolio-image {
+    filter: blur(3px) brightness(120%) grayscale(70%) opacity(80%);
+    @include transition-property(filter);
+    @include transition-duration(1.5s);
+    @include transition-timing-function(ease-in);
+
+      &:hover,
+      &:active,
+      &:focus {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
+        filter: blur(0px);
+      }
+  }
 }
