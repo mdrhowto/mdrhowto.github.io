@@ -1,0 +1,29 @@
+{% if jekyll.environment == "debug" %}
+  <!-- tpl_layout_navigation.html -->
+{% endif %}
+
+<div class="container-fluid">
+  <div class="row full-height" style="marginleft:0;margin-right:0;padding:50px;">
+    <div class="col-xs-12">
+      <aside>
+        <h2 class="page-heading">Blog</h2>
+        <ul class="post-list">
+          {% for post in site.posts %}
+          <li class="col-sm-6 col-md-4 col-lg-3">
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            &nbsp;
+            <h2>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+            </h2>
+          </li>
+          {% endfor %}
+        </ul>
+      </aside>
+    </div>
+  </div>
+</div>
+
+
+{% if jekyll.environment == "debug" %}
+  <!--// tpl_layout_navigation.html -->
+{% endif %}

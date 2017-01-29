@@ -1,45 +1,45 @@
 ---
 layout: default
 ---
+{% assign promoted_projects = site.portfolio | sort: 'date' reversed %}
 
 {% include tpl_layout_top.html %}
 <body class="{% if page.url == '/' %}front{% endif %}" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-  <div class="container-fixed content">
+  <div class="container content">
     {% include tpl_layout_navigation.html %}
-
-    <aside>
-      <div class="row full-height">
-      </div>
-    </aside>
     <div class="row">
       <div class="col-sm-12">
       {{ content }}
 
 
-      {% assign promoted_projects = site.portfolio | sort: 'date' | sort: 'weight' %}
-      <div class="" role="">
-
       {% for project in promoted_projects %}
-
-
-<h3>{{ project.title }}</h3>
-<p>{{ project.content }}</p>
-<ul>
-<li>weight: {{ project.weight }}</li>
-<li>promoted: {{ project.promoted }}</li>
-<li>tags: {{ project.tags }}</li>
-<li>sticky: {{ project.sticky }}</li>
-<li>website_url: {{ project.website_url }}</li>
-    <ul>
-        {% for img in project.images %}
-        <li> image: {{ img.title }}</li>
-        {% endfor %}
-    </ul>
-</ul>
-{% endfor %}
+      <aside>
+      <div class="" role="">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.content }}</p>
+          {% for img in project.images %}
+            {% if forloop.first %}
+            <img class="portfolio-thumb" alt="{{ img.title }}" title="{{ img.title }}" src="{{ img.path }}{{ img.file }}"> {{ img.title }}</li>
+            {% endif %}
+          {% endfor %}
+        <ul>
+          <li>date: {{ project.date }}</li>
+          <li>weight: {{ project.weight }}</li>
+          <li>promoted: {{ project.promoted }}</li>
+          <li>tags: {{ project.tags }}</li>
+          <li>sticky: {{ project.sticky }}</li>
+          <li>website_url: {{ project.website_url }}</li>
+          <li>weight: {{ project.foo }}</li>
+          <ul>
+          {% for img in project.images %}
+            <li>image: {{ img.title }}</li>
+          {% endfor %}
+          </ul>
+          <li>{{ project | jsonify | strip_html }}</li>
+        </ul>
       </div>
-
-
+      </aside>
+      {% endfor %}
 
       </div>
     </div>
