@@ -1,5 +1,5 @@
 ---
-title:  "Get It Together"
+title: Get It Together
 tags: Jekyll
 promoted: true                                                                  # carousel: true = promoted to image carousel
 sticky: false                                                                   # carousel: true = first slide (css: active)

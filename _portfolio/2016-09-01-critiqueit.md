@@ -1,5 +1,8 @@
 ---
 title:  "Website: CritiqueIT.com"
+description: CritiqueIT contracted Media Done Right to re-build their existing website using Wordpress to provide new responsive capabilities and an updated look.
+date: 2016-09-01 09:09:09 -0800
+last_modified_at: 2017-01-27 09:09:09 -0800
 tags: Wordpress
 promoted: true                                                                  # carousel: true = promoted to image carousel
 sticky: false                                                                   # carousel: true = first slide (css: active)

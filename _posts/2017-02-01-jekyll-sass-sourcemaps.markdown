@@ -1,6 +1,7 @@
 ---
 title:  "Tutorial—Jekyll Setup for SASS Sourcemaps"
 tags: jekyll, sourcemaps
+date: "2017-02-01 11:19:06 -0800"
 published: true
 permalink:
 promoted:                                                                   # carousel: true = promoted to image carousel

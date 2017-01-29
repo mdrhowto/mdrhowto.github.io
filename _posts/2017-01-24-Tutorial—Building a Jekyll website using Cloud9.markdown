@@ -1,6 +1,7 @@
 ---
 title:  "Tutorial—Building a Jekyll website using Cloud9"
 tags: jekyll
+date: "2017-01-25 09:19:06 -0800"
 published: true
 permalink:
 promoted:                                                                   # carousel: true = promoted to image carousel

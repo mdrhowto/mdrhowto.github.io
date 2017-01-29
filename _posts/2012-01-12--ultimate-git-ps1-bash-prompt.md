@@ -2,7 +2,7 @@
 title: Ultimate GIT PS1 bash prompt
 tags: bash
 published: true
-permalink:
+permalink: 
 promoted:                                                                       # carousel: true = promoted to image carousel
 sticky:                                                                         # carousel: true = first slide (css: active)
 weight: 00                                                                      # carousel: sort order (reversed from high to low)
@@ -19,8 +19,8 @@ images:
 When we build Drupal websites at Media Done Right, one of the tools we use is GIT.
 
 Do you use GIT? In our opinion, here's the best custom bash PS1 prompt for GIT.
-
 <!--break-->
+
 ## The Goal
 
 Ok, so why would you want to customize the bash prompt? Well it makes working at the command line much easier and can provide useful visual feedback, much like in a GUI program. Other tutorials on the web show versions of PS1 customizations that show you the GIT branch. And some even show the status of the branch. And there are many that show all the PS1 variables available, cool and colorful prompts of every sort.
@@ -29,7 +29,7 @@ However, the problem with the tutorials that show status of GIT working tree cha
 
 So we took the idea of showing the current GIT branch plus any changes to the GIT Working Tree and then combined it with some of the custom color prompts we've seen. In this way you always know the branch and based on color, and potentially some sort of parsing character, the status. (We used curly brackets in the example). We also made it really easy for you (or us) to change by defining constants. However, my ultimate goal would be to utilize the colors of the BASH profile used by gnome-terminal. If you know how to do this, I'd love a pointer in the right direction.
 
-The result of this BASH PS1 customization can be something that looks like this: ![GIT PS1 CUSTOMIZATION](/sites/mediadoneright.com/files/manual/GIT_PS1_CUSTOMIZATION.png)
+The result of this BASH PS1 customization can be something that looks like this: ![GIT PS1 CUSTOMIZATION](/style/images/blog/GIT_PS1_CUSTOMIZATION.png)
 
 ## Here's How to Customize the BASH prompt for GIT
 
@@ -165,6 +165,6 @@ Note the reference numbers in this list relate to the image below.
 4.  Ok, this is the fun! Green parenthesis means you're on an unchanged branch.
 5.  Red Curly Brackets means something's changed! You have a dirty branch. Either finish & commit or cleanup. ;-)
 
-![GIT PS1 CUSTOMIZATION explained](/sites/mediadoneright.com/files/manual/GIT_PS1_CUSTOMIZATION_explained.png)
+![GIT PS1 CUSTOMIZATION explained](/style/images/blog/GIT_PS1_CUSTOMIZATION_explained.png)
 
 Enjoy! Feel free to use or customize. A thanks on twitter: @MediaDoneright or link to this page from your spot on the Internet would also be nice.
