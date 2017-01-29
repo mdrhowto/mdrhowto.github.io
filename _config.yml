@@ -8,47 +8,31 @@
 #                     sass --sourcemap=auto --update --force --watch style/css/_main.scss:_site/style/css/style.css
 #                     sass --sourcemap=auto --watch style/css/_main.scss:_site/style/css/style.css
 
+#
+#  ██████  ██       ██████  ██████   █████  ██
+# ██       ██      ██    ██ ██   ██ ██   ██ ██
+# ██   ███ ██      ██    ██ ██████  ███████ ██
+# ██    ██ ██      ██    ██ ██   ██ ██   ██ ██
+#  ██████  ███████  ██████  ██████  ██   ██ ███████
+
 title: Media Done Right
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "/www" # the subpath of your site, e.g. /blog
-url: "//mdrhowto.github.io" # the base hostname & protocol for your site
-
-# Third party tokens and accounts                                               # MDR: Third party
-google-site-verification: z08mpbqfq2cp4mfuxeOzinIJcSAqhM7lU0z2YMz72U0
-google-analytics:
-twitter:  MediaDoneRight
-github:   MediaDoneRight
-facebook: MediaDoneRight
-
-
-# Customize menu names & links for the site
-navigation:                                                                     # MDR: Site Navigation Menu elements: names and links
-  brand:                                                                        # MDR: Brand menu
-    text: #"<span class='light'>Media Done Right</span>"
-    link: "#"
-    logo: "/style/images/theme/logo.svg"                                              # if empty, defaults to an arrow icon using font-awesome
-  main:                                                                         # MDR: Main Menu  ( "LABEL": "URL" )
-    "Hire Us": "/contact/"
-    "Our Work": "/portfolio/"
-    "What We Do": "/web-development/"
-    "Who We Are": "/team/"
-    "Blog": "/blog/"
-  foot:                                                                         # MDR: Footer Menu
-    "Copyright &copy; 2016 Uncoded.org":
-
+  Media Done Right is a web development shop based in Long Beach, CA.
+  We specialize in creating custom websites for our clients and doing what it takes to make them happy.
+  We design and develop professional websites that provide value.
+  We're also passionate about open source software and the liberties it provides our clients.
+baseurl: ""                                                                 # the subpath of your site, e.g. /blog
+url: "http://mediadoneright.com"                                                     # the base hostname & protocol for your site
 
 collections:
   portfolio:
     output: true
-    permalink: /content/portfolio/:title/
+    permalink: /portfolio/:title/
   pages:
     output: true
     permalink: /:title/
 
-
+# Content Types  (aka Jekyll Collection)
 defaults:
   -
     scope:
@@ -58,9 +42,10 @@ defaults:
     values:
       layout: "post"
       excerpt_separator: <!--break-->
-      #date:   2016-10-24 17:15:39 +0700
-      permalink: /blog/:year/:month/:day/:title/
+      category: blog
+      permalink: /:categories/:year/:title/
       paginate_path: "/blog/page:num/"
+      author: "Mike Stewart"
   -                                                                             # Collections
     scope:
       type: "pages" # pages was previously `page` in Jekyll 2.2.
@@ -68,7 +53,7 @@ defaults:
     values:
       layout: "page" # overrides previous default layout
       excerpt_separator: <!--break-->
-      author: "Mike Stewart"
+      author: "Media Done Right"
   -
     scope:
       type: "portfolio" # pages was previously `page` in Jekyll 2.2.
@@ -76,7 +61,60 @@ defaults:
     values:
       layout: "page" # overrides previous default layout
       excerpt_separator: <!--break-->
-      author: "Mike Stewart"
+      author: "Media Done Right"
+      #last_modified_at: 2017-01-27 09:09:09 -0800
+      sitemap: true
+
+
+#
+#  ██████ ██    ██ ███████ ████████  ██████  ███    ███      ██████  ██       ██████  ██████   █████  ██
+# ██      ██    ██ ██         ██    ██    ██ ████  ████     ██       ██      ██    ██ ██   ██ ██   ██ ██
+# ██      ██    ██ ███████    ██    ██    ██ ██ ████ ██     ██   ███ ██      ██    ██ ██████  ███████ ██
+# ██      ██    ██      ██    ██    ██    ██ ██  ██  ██     ██    ██ ██      ██    ██ ██   ██ ██   ██ ██
+#  ██████  ██████  ███████    ██     ██████  ██      ██      ██████  ███████  ██████  ██████  ██   ██ ███████
+
+# Menu names & links for the site
+navigation:                                                                     # MDR: Site Navigation Menu elements: names and links
+  brand:                                                                        # MDR: Brand menu
+    text: #"<span class='light'>Media Done Right</span>"
+    link: "#"
+    logo: "/style/images/theme/logo.svg"                                        # if empty, defaults to an arrow icon using font-awesome
+  main:                                                                         # MDR: Main Menu  ( "LABEL": "URL" )
+    "Hire Us": "/contact/"
+    "Our Work": "/portfolio/"
+    "What We Do": "/web-development/"
+    "Who We Are": "/team/"
+    "Blog": "/blog/"
+  foot:                                                                         # MDR: Footer Menu
+    "Copyright &copy; 2016 Uncoded.org":
+
+# Plugin config: jekyll-seo-tag
+# SEO & Social
+# Add metadata tags for search engines and social networks to better index and display your site's content.
+# Docs: https://github.com/jekyll/jekyll-seo-tag
+webmaster_verifications:
+  google: z08mpbqfq2cp4mfuxeOzinIJcSAqhM7lU0z2YMz72U0
+  bing:
+  alexa:
+  yandex:
+
+social:
+  name: Media Done Right
+  links:
+    - https://twitter.com/MediaDoneRight
+    - https://www.facebook.com/MediaDoneRight
+    - https://plus.google.com/105200184803537891303
+    - https://github.com/MediaDoneRight
+    - https://instagram.com/MediaDoneRight
+
+google-site-verification: z08mpbqfq2cp4mfuxeOzinIJcSAqhM7lU0z2YMz72U0
+twitter:
+  username: MediaDoneRight
+
+# custom MDR: Third party
+google-analytics: UA-20598699-2
+github:   MediaDoneRight
+facebook: MediaDoneRight
 
 
 # Build settings
@@ -84,7 +122,6 @@ markdown: kramdown
 theme: minima
 timezone: America/Los_Angeles                                                   # MDR: (Jekyll built-in. Just not set by default) Values from: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 future: false                                                                   # MDR: Publish posts or collection documents with a future date.
-environment: production                                                         # MDR: Verbose debugging.  Value of 'debug' creates various extra output
 
 sass:
   sass_dir: style/css
@@ -114,9 +151,6 @@ javascript:
   # - name: jQuery Slick Slideshow Plugin
   #   source: //cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js
   #   local:
-  # - name: local site
-  #   source: /style/js/bootstrap.js
-  #   local: true
   - name: local site
     source: /style/js/bootstrap.min.js
     local: true
@@ -127,12 +161,16 @@ javascript:
 #paginate: 2
 #
 gems:
-  - jemoji
+  - jemoji          # GitHub-flavored emoji
+  - jekyll-seo-tag  # Add metadata tags for search engines and social networks to better index and display your site's content.
+  - jekyll-feed
+  - jekyll-sitemap
 #   - jekyll-pagination
 
 exclude:
   - Gemfile
   - Gemfile.lock
+  - README.md
   - LICENSE
   - .gitignore
   - .git

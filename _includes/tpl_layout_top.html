@@ -1,17 +1,15 @@
-{% if site.environment == "debug" %}
+{% if jekyll.environment == "debug" %}
   <!-- tpl_layout_top.html -->
 {% endif %}
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	{% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
-	<title>{{ page.title }} — {{ site.title }}</title>
-	{% include head/meta.html %}
+	{% include head/google_analytics.html %}
 	{% include head/stylesheets.html %}
 	{% include head/javascript.html %}
-	{% include head/meta_verification.html %}
+	{% seo %}
 </head>
 
-{% if site.environment == "debug" %}
+{% if jekyll.environment == "debug" %}
   <!--// tpl_layout_top.html -->
 {% endif %}

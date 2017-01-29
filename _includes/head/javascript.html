@@ -1,4 +1,4 @@
-{% if site.environment == "debug" %}
+{% if jekyll.environment == "debug" %}
   <!-- tpl_head_js.html -->
 {% endif %}
 
@@ -6,6 +6,6 @@
 {% include utilities/url.html %}
 <script type="text/javascript"  src="{{ simpleurl }}{{ link.source }}"></script>
 {% endfor %}
-{% if site.environment == "debug" %}
+{% if jekyll.environment == "debug" %}
   <!--// tpl_head_js.html -->
 {% endif %}

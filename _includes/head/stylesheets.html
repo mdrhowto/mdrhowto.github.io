@@ -1,4 +1,4 @@
-{% if site.environment == "debug" %}
+{% if jekyll.environment == "debug" %}
   <!-- tpl_head_css.html -->
 {% endif %}
 
@@ -7,6 +7,6 @@
 <link rel="stylesheet" href="{{ simpleurl }}{{ link.source }}"> 
 {% endfor %}
 
-{% if site.environment == "debug" %}
+{% if jekyll.environment == "debug" %}
   <!--// tpl_head_css.html -->
 {% endif %}

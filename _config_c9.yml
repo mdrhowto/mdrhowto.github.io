@@ -2,7 +2,6 @@ host: "0.0.0.0"
 port: "8080"
 baseurl: ""
 url: "//www-mdrhowto.c9users.io"
-environment: debug
 keep_files:
   - style/css/style.css.map
   - style/css/style.css
